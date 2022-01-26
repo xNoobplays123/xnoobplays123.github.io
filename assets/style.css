@@ -1,10 +1,10 @@
 h3, h1, #version {
     font-family: 'Atkinson Hyperlegible';
     font-size: 25px;
-    color: rgb(15, 155, 33);
+    color: rgb(48, 177, 121);
 }
 html {
-    background-color: rgb(240, 238, 118);
+    background-color: rgb(215, 255, 255);
 }
 
 #tweet {
