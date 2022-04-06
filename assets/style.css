@@ -14,3 +14,43 @@ html {
 #welcome {
     font-size: 50px;
 }
+
+#project{
+
+}
+
+#recipe{
+    color: rgb(65, 153, 204);
+}
+
+#coloring {
+    text-decoration: none;
+    color: rgb(177, 214, 14);
+}
+
+/* ----- Footer ----- */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.icons .fa{
+    margin: 0 8px;
+    cursor: pointer;
+    padding: 3px 0;
+    font-size: 70px;
+}
+
+.fa.fa-github{
+    color: black;
+}
+
+.fa.fa-youtube-play{
+    color: red;
+}
+
+.fa-desktop{
+    color: blue;
+}
