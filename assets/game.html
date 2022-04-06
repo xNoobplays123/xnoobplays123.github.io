@@ -1,22 +1,112 @@
-<canvas id="gc" width="640" height="480"></canvas>
-<script>
-    p1y=p2y=40;
-    pt=10;
-    ph=100;
-    bx=by=50;
-    bd=5;
-    xv=yv=4;
+<audio id="myAudio">
+    <source src="audio/XXI.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
 
-    window.onload=function() {
-        c=document.getElementById('gc');
-        cc=c.getContext('2d');
-        setInterval(update,1000/30);
+<canvas id="gc" width="640" height="480"></canvas>
+
+<script type="text/javascript">
+
+    p1y = p2y = 40;
+    pthick = 10;
+    pheight = 100;
+    ballx = bally = 50;
+    bd = 6;
+    xvel = yvel = 10;
+    score1 = score2 = 0;
+    aiSpeed = 6;
+
+    window.onload = () => {
+        c = document.getElementById('gc');
+        cc = c.getContext('2d');
+        cc.font = '20px Arial';
+        setInterval(update, 1000 / 30);
+        c.addEventListener('mousemove', (e) => {
+            p1y = e.clientY - pheight / 2;
+        });
     }
+
+    function reset() {
+        ballx = c.width / 2;
+        ballyx = c.height / 2;
+        xvel = -xvel;
+        yvel = 3;
+    }
+
     function update() {
-        cc.fillStyle='black';
-        cc.fillRect(0,0,c.width,c.height);
-        cc.fillStyle='white';
-        cc.fillRect(0,p1y,pt,ph);
-        cc.fillRect(c.width-pt,p2y,pt,ph);
+        ballx += xvel;
+        bally += yvel;
+
+        if (bally < 0 && yvel < 0) {
+            yvel = -yvel;
+        }
+
+        if (bally > c.height && yvel > 0) {
+            yvel = -yvel;
+        }
+
+        // Ball bouncing off left side
+        if (ballx < 20) {
+            if (bally > p1y && bally < p1y + pheight) {
+                xvel = -xvel;
+                deltaY = bally - (p1y + pheight / 2);
+                yvel = deltaY * 0.3;
+            } else {
+                score2++;
+                reset();
+            }
+        }
+
+        // Ball bouncing off right side
+        if (ballx > c.width - 20) {
+            if (bally > p2y && bally < p2y + pheight) {
+                xvel = -xvel;
+                deltaY = bally - (p2y + pheight / 2);
+                yvel = deltaY * 0.3;
+            } else {
+                score1++;
+                reset();
+            }
+        }
+
+        // AI movement
+        if (p2y + pheight / 2 < bally || p2y + pheight / 2 < bally + 10) {
+            p2y += aiSpeed;
+        }
+        if (p2y + pheight / 2 > bally || p2y + pheight / 2 > bally - 10) {
+            p2y -= aiSpeed;
+        }
+
+        // Background
+        cc.fillStyle = 'black';
+        cc.fillRect(0, 0, c.width, c.height);
+        // Ball
+        cc.fillStyle = 'firebrick';
+        cc.fillRect(ballx - bd / 2, bally - bd / 2, bd, bd);
+        // Paddle 1
+        cc.fillStyle = 'cyan';
+        cc.fillRect(0, p1y, pthick, pheight);
+        // Score 1
+        cc.fillText(score1, 100, 50);
+        // Paddle 2
+        cc.fillStyle = 'lime';
+        cc.fillRect(c.width - pthick, p2y, pthick, pheight);
+        // Score 2
+        cc.fillText(score2, c.width - 100, 50);
     }
+</script>
+
+<button onclick="playAudio()" type="button">Play Audio</button>
+<button onclick="pauseAudio()" type="button">Pause Audio</button>
+
+<script>
+    var audio = document.getElementById("myAudio");
+
+    function playAudio() {
+        audio.play();
+    }
+
+    function pauseAudio() {
+        audio.pause();
+    } 
 </script>
