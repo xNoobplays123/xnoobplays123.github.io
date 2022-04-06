@@ -28,6 +28,13 @@ html {
     color: rgb(177, 214, 14);
 }
 
+.parent {
+    text-align: center;
+  }
+  .parent > ul {
+    display: inline-block;
+  }
+
 /* ----- Footer ----- */
 
 .footer{
