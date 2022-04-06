@@ -1,3 +1,7 @@
+*{
+    text-align: center;
+}
+
 h3, h1, #version {
     font-family: 'Atkinson Hyperlegible';
     font-size: 25px;
@@ -19,7 +23,7 @@ html {
 
 }
 
-#recipe{
+#list{
     color: rgb(65, 153, 204);
 }
 
