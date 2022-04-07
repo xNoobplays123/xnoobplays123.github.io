@@ -1,3 +1,9 @@
+<head>
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <title>Ping Pong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <audio id="myAudio">
     <source src="audio/XXI.mp3" type="audio/mp3">
     Your browser does not support the audio element.
@@ -19,7 +25,7 @@
     window.onload = () => {
         c = document.getElementById('gc');
         cc = c.getContext('2d');
-        cc.font = '20px Arial';
+        cc.font = '25px Arial';
         setInterval(update, 1000 / 30);
         c.addEventListener('mousemove', (e) => {
             p1y = e.clientY - pheight / 2;
@@ -46,7 +52,7 @@
         }
 
         // Ball bouncing off left side
-        if (ballx < 20) {
+        if (ballx < 23) {
             if (bally > p1y && bally < p1y + pheight) {
                 xvel = -xvel;
                 deltaY = bally - (p1y + pheight / 2);
@@ -58,7 +64,7 @@
         }
 
         // Ball bouncing off right side
-        if (ballx > c.width - 20) {
+        if (ballx > c.width - 23) {
             if (bally > p2y && bally < p2y + pheight) {
                 xvel = -xvel;
                 deltaY = bally - (p2y + pheight / 2);
