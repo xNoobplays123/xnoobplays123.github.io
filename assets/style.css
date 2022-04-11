@@ -1,12 +1,15 @@
-*{
+* {
     text-align: center;
 }
 
-h3, h1, #version {
+h3,
+h1,
+#version {
     font-family: 'Atkinson Hyperlegible';
     font-size: 25px;
     color: rgb(48, 177, 121);
 }
+
 html {
     background-color: rgb(215, 255, 255);
 }
@@ -19,11 +22,7 @@ html {
     font-size: 50px;
 }
 
-#project{
-
-}
-
-#list{
+#list {
     color: rgb(65, 153, 204);
 }
 
@@ -34,34 +33,53 @@ html {
 
 .parent {
     text-align: center;
-  }
-  .parent > ul {
+}
+
+.parent>ul {
     display: inline-block;
-  }
+}
+
+.button {
+    background-color: darkgreen;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+
+.button:hover {
+    background-color: greenyellow;
+    border-radius: 18px;
+}
 
 /* ----- Footer ----- */
 
-.footer{
+.footer {
     width: 100%;
     text-align: center;
     padding: 30px 0;
 }
 
-.icons .fa{
+.icons .fa {
     margin: 0 8px;
     cursor: pointer;
     padding: 3px 0;
     font-size: 70px;
 }
 
-.fa.fa-github{
+.fa.fa-github {
     color: black;
 }
 
-.fa.fa-youtube-play{
+.fa.fa-youtube-play {
     color: red;
 }
 
-.fa-desktop{
+.fa-desktop {
     color: blue;
 }
