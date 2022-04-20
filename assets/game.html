@@ -2,6 +2,7 @@
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <title>Ping Pong</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
 </head>
 
 <audio id="myAudio">
@@ -9,7 +10,9 @@
     Your browser does not support the audio element.
 </audio>
 
-<canvas id="gc" width="640" height="480"></canvas>
+<center>
+<canvas id="gc"  width="700" height="480"></canvas>
+</center>
 
 <script type="text/javascript">
 
@@ -90,7 +93,7 @@
         cc.fillStyle = 'firebrick';
         cc.fillRect(ballx - bd / 2, bally - bd / 2, bd, bd);
         // Paddle 1
-        cc.fillStyle = 'cyan';
+        cc.fillStyle = 'blue ';
         cc.fillRect(0, p1y, pthick, pheight);
         // Score 1
         cc.fillText(score1, 100, 50);
@@ -102,8 +105,15 @@
     }
 </script>
 
-<button onclick="playAudio()" type="button">Play Audio</button>
-<button onclick="pauseAudio()" type="button">Pause Audio</button>
+<br>
+
+<button onclick="playAudio()" type="button" class="audio-button">Play Audio</button>
+<button onclick="pauseAudio()" type="button" class="audio-button">Pause Audio</button>
+
+<br>
+<br>
+
+<a id="coloring" href="../../index.html"><span title="Back-Button"><button class="back-button">Back</button></span></a>
 
 <script>
     var audio = document.getElementById("myAudio");
