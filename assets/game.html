@@ -11,7 +11,7 @@
 </audio>
 
 <center>
-<canvas id="gc"  width="700" height="480"></canvas>
+<canvas id="canvas" width="700" height="480"></canvas>
 </center>
 
 <script type="text/javascript">
@@ -26,7 +26,7 @@
     aiSpeed = 6;
 
     window.onload = () => {
-        c = document.getElementById('gc');
+        c = document.getElementById('canvas');
         cc = c.getContext('2d');
         cc.font = '25px Arial';
         setInterval(update, 1000 / 30);
