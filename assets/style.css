@@ -14,10 +14,6 @@ html {
     background-color: rgb(215, 255, 255);
 }
 
-#tweet {
-    width: 64px;
-}
-
 #welcome {
     font-size: 50px;
 }
@@ -82,4 +78,44 @@ html {
 
 .fa-desktop {
     color: blue;
+}
+
+/* ------ Screen Adjusting ------ */
+
+@media(max-width: 500px) {
+    h3,
+    h1,
+    #version {
+        font-size: 20px;
+    }
+
+    #welcome {
+        font-size: 40px;
+    }
+
+    .button {
+        padding: 10px 22px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .button:hover {
+        background-color: darkgreen;
+        border-radius: 10px;
+    }
+
+    /* ----- Footer ----- */
+
+    .footer {
+        width: 100%;
+        text-align: center;
+        padding: 22px 0;
+    }
+
+    .icons .fa {
+        margin: 0 6px;
+        cursor: pointer;
+        padding: 3px 0;
+        font-size: 60px;
+    }
 }

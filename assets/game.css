@@ -39,3 +39,34 @@
 .audio-button:hover {
     background-color: rgb(140, 0, 0);
 }
+
+/* ------ Screen Adjusting ------ */
+
+@media(max-width: 500px) {
+
+    canvas{
+        width: 410px;
+        height: 308px;
+    }
+
+    .back-button {
+        padding: 10px 22px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .back-button:hover {
+        background-color: darkgreen;
+        border-radius: 10px;
+    }
+    
+    .audio-button {
+        padding: 6px 16px;
+        font-size: 14px;
+        border-radius: 14px;
+    }
+
+    .audio-button:hover {
+        background-color: rgb(255, 30, 0);
+    }
+}
