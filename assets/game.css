@@ -15,7 +15,7 @@
     display: inline-block;
     font-size: 16px;
     border-radius: 10px;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 
 .back-button:hover {
@@ -33,7 +33,7 @@
     display: inline-block;
     font-size: 16px;
     border-radius: 16px;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 
 .audio-button:hover {
