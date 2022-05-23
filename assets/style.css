@@ -14,7 +14,7 @@ html {
     background-color: rgb(215, 255, 255);
 }
 
-#scroll{ 
+#scroll {
     background-image: url("android-chrome-130x130.png");
     height: 130px;
     width: 130px;
@@ -27,9 +27,11 @@ html {
     0% {
         transform: translateX(50px);
     }
+
     50% {
         transform: translateX(-50px);
     }
+
     100% {
         transform: translateX(50px);
     }
@@ -43,11 +45,15 @@ html {
     font-size: 50px;
 }
 
-#list {
+h3 {
     color: rgb(65, 153, 204);
 }
 
-a{
+#game{
+    margin-top: 50px;
+}
+
+a {
     text-decoration: none;
     color: rgb(177, 214, 14);
 }
@@ -108,6 +114,7 @@ a{
 /* ------ Screen Adjusting ------ */
 
 @media(max-width: 500px) {
+
     h3,
     h1,
     #version {
