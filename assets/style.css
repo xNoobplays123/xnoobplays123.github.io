@@ -1,4 +1,4 @@
-* {
+body {
     text-align: center;
 }
 
@@ -37,10 +37,6 @@ html {
     }
 }
 
-
-
-
-
 #welcome {
     font-size: 50px;
 }
@@ -49,7 +45,7 @@ h3 {
     color: rgb(65, 153, 204);
 }
 
-#game{
+#game {
     margin-top: 50px;
 }
 
@@ -66,20 +62,20 @@ a {
     display: inline-block;
 }
 
-.button {
+#button {
     background-color: darkgreen;
     border: none;
     color: white;
-    padding: 12px 25px;
+    padding: 4px 14px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 12px;
     transition: 0.5s;
+    font-family: Arial;
 }
 
-.button:hover {
+#button:hover {
     background-color: rgb(0, 185, 0);
     border-radius: 20px;
 }
